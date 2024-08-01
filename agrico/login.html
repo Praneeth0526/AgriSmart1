@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            height: 100%;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .background {
+    flex: 1;
+    background-image: url('./public/rayhanhibatullahtxx8psh-rvmunsplash-11@2x.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: space-between; /* Change this line */
+    align-items: center;
+}
+.login-box {
+    background: white;
+    height: 265px;
+    width: 290px;
+    padding: 20px;
+    border-radius: 8px;
+    margin-left: 90px; /* Add this line */
+    display: flex;
+    flex-direction: column; /* Add this line */
+    align-items: flex-start; /* Add this line */
+}
+.logo {
+    width: 150px;
+    height: 100px;
+    margin-bottom: 20px;
+    margin-left: auto; /* Add this line */
+    margin-right: auto; /* Add this line */
+}
+input[type="tel"],
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+.hello_ji{
+    justify-content: center;
+    align-items: center;
+    width: 109%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+button {
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-section {
+            flex: 1;
+        }
+        .social-icons a {
+            color: white;
+            margin-right: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="background">
+            <div class="login-box">
+                    <img src="/agrico/public/2-12@2x.png" alt="Company Logo" class="logo">
+                    <form id="loginForm" class="loginfo">
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                        <button type="button" onclick="sendOTP()" class="hello_ji">Send OTP</button>
+
+                        <input type="text" id="otp" placeholder="Enter OTP" style="display:none;" class="button">
+                        <button type="submit" style="display:none;" class="hello_ji">LOGIN</button>
+                    </form>
+            </div>
+        </div>
+        <footer>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Get Latest News!</h3>
+                    <p>Enter Phone Number</p>
+                    <button>Subscribe</button>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <p>123 Main St, City, Country</p>
+                    <p>Email: support@example.com</p>
+                    <p>Phone: +1234567890</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <p><a href="#">Privacy Policy</a></p>
+                    <p><a href="#">Terms of Use</a></p>
+                    <p><a href="#">FAQ</a></p>
+                    <p><a href="#">Contact</a></p>
+                </div>
+                <div class="footer-section">
+                    <h3>Download App</h3>
+                    <p><a href="#">Google Play</a></p>
+                    <p><a href="#">App Store</a></p>
+                    <div class="social-icons">
+                        <a href="#">F</a>
+                        <a href="#">T</a>
+                        <a href="#">I</a>
+                        <a href="#">L</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function sendOTP() {
+            // Simulate OTP sending
+            alert("OTP sent to your phone!");
+            document.getElementById('otp').style.display = 'block';
+            document.querySelector('button[type="submit"]').style.display = 'block';
+        }
+
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            window.location.href = "/field.html";
+        });
+    </script>
+</body>
+</html>
